@@ -1,0 +1,10 @@
+apache-torblocker (0.1.0-1) unstable; urgency=medium
+
+  * Initial release
+  * Port of nginx-torblocker for Apache httpd
+  * Three access modes: off, on (block Tor), only (allow only Tor)
+  * Automatic Tor exit node list fetching
+  * Per-location configuration
+  * O(1) IP hash set lookup
+
+ -- Rumen Damyanov <contact@rumenx.com>  Tue, 01 Apr 2026 12:00:00 +0300

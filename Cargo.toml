@@ -1,0 +1,24 @@
+[package]
+name = "apache-torblocker"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Apache module for controlling access from Tor exit nodes"
+repository = "https://github.com/RumenDamyanov/apache-torblocker"
+authors = ["Rumen Damyanov <contact@rumenx.com>"]
+
+[lib]
+name = "torblocker"
+crate-type = ["staticlib"]
+
+[dependencies]
+# HTTP client for fetching Tor exit list
+ureq = { version = "2", features = ["tls"] }
+# IP address handling
+ipnet = "2"
+# C-compatible types
+libc = "0.2"
+
+[profile.release]
+lto = true
+strip = true
