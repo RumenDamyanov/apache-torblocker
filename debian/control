@@ -1,0 +1,18 @@
+Source: apache-torblocker
+Section: web
+Priority: optional
+Maintainer: Rumen Damyanov <contact@rumenx.com>
+Build-Depends: debhelper-compat (= 13), rustc, cargo, apache2-dev
+Standards-Version: 4.6.0
+Homepage: https://github.com/RumenDamyanov/apache-torblocker
+
+Package: apache-torblocker
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         apache2 (>= 2.4.0)
+Description: Apache module for controlling access from Tor exit nodes
+ Controls access from Tor exit nodes with three modes: block Tor
+ traffic, allow only Tor traffic, or allow all. Automatically
+ fetches and refreshes the Tor exit node list. Port of
+ nginx-torblocker for Apache httpd. Written in Rust for memory safety.
